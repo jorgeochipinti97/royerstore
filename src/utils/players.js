@@ -1,0 +1,27 @@
+export const jugadoresArgentina2Estrellas = [
+  "10 Lionel Messi",
+  "11 Ángel Di María",
+  "9 Julián Álvarez",
+  "26 Nahuel Molina",
+  "4 Gonzalo Montiel",
+  "13 Cristian Romero",
+  "6 Germán Pezzella",
+  "19 Nicolás Otamendi",
+  "25 Lisandro Martínez",
+  "8 Marcos Acuña",
+  "3 Nicolás Tagliafico",
+  "2 Juan Foyth",
+  "7 Rodrigo De Paul",
+  "5 Leandro Paredes",
+  "20 Alexis Mac Allister",
+  "18 Guido Rodríguez",
+  "17 Alejandro Gómez",
+  "24 Enzo Fernández",
+  "14 Exequiel Palacios",
+  "16 Thiago Almada",
+
+  "22 Lautaro Martínez",
+
+  "21 Paulo Dybala",
+  "15 Ángel Correa",
+];
