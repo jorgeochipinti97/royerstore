@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const page = () => {
+const Page = () => {
   const searchParams = useSearchParams();
   const [order, setOrder] = useState();
   const getOrder = async (_id) => {
@@ -68,13 +68,13 @@ const page = () => {
             Total Amount: ${order.total}
           </p>
           <p className="font-geist text-center mt-2 text-2xl  ">
-            Here are the details of the products you've purchased:
+            Here are the details of the products you have purchased:
           </p>
 
           <div className="flex justify-center mt-10">
             <div className="justify-center flex-wrap flex w-9/12">
-              {order.orderItems.map((e) => (
-                <Card className="w-[350px] m-2">
+              {order.orderItems.map((e,index) => (
+                <Card className="w-[350px] m-2" key={index}>
                   <CardHeader>
                     <CardTitle className="text-center font-geist tracking-tighter">
                       {e.title}
@@ -103,4 +103,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

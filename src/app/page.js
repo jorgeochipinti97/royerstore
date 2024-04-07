@@ -75,7 +75,9 @@ export default function Home() {
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <Button variant="secondary">
-              <span className="bg-sky-500 border border-black text-white px-2 py-1 absolute bottom-8 right-10 text-md font-geist rounded-full">{total}</span>
+              <span className="bg-sky-500 border border-black text-white px-2 py-1 absolute bottom-8 right-10 text-md font-geist rounded-full">
+                {total}
+              </span>
               <svg
                 width={30}
                 xmlns="http://www.w3.org/2000/svg"
@@ -244,24 +246,30 @@ text-4xl md:text-6xl font-bold font-geist  text-center tracking-tighter  argenti
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3  ">
-        {argentinaProducts.map((e) => (
-          <CardProduct product={e} />
+        {argentinaProducts.map((e, index) => (
+          <div key={index}>
+            <CardProduct product={e} />
+          </div>
         ))}
       </div>
       <p className="mt-10 text-center text-4xl md:text-6xl font-bold font-geist  tracking-tighter  boca">
         BOCA JUNIORS
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3  ">
-        {bocaProducts.map((e) => (
-          <CardProduct product={e} />
+        {bocaProducts.map((e, index) => (
+          <div key={index}>
+            <CardProduct product={e} />
+          </div>
         ))}
       </div>
       <p className="mt-10 text-center text-4xl md:text-6xl font-bold font-geist  tracking-tighter  river">
         RIVER PLATE
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3  ">
-        {riverProducts.map((e) => (
-          <CardProduct product={e} />
+        {riverProducts.map((e,index) => (
+          <div key={index}>
+            <CardProduct product={e} />
+          </div>
         ))}
       </div>
     </div>

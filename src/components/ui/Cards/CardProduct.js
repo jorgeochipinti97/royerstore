@@ -93,8 +93,8 @@ export const CardProduct = ({ product }) => {
             <div className="flex justify-center">
               <Carousel className="w-9/12">
                 <CarouselContent>
-                  {product.images.map((e) => (
-                    <CarouselItem>
+                  {product.images.map((e,index) => (
+                    <CarouselItem key={index}>
                       <img src={`${e}`} className="w-12/12" />
                     </CarouselItem>
                   ))}
@@ -108,7 +108,7 @@ export const CardProduct = ({ product }) => {
             <CardTitle className="ml-2 font-geist tracking-tighter">
               {product.title}
             </CardTitle>
-            {selectedPlayer}
+
             <p className=" text-xl font-geist tracking-tighter mt-5">
               ${selectedPlayer.length > 2 ? product.price + 20 : product.price}
             </p>
@@ -130,8 +130,9 @@ export const CardProduct = ({ product }) => {
                         </p>
                         <div className="flex justify-start mt-2">
                           {talles.length > 0 &&
-                            talles.map((e) => (
+                            talles.map((e,index) => (
                               <Button
+                              key={index}
                                 onClick={() => setSize(e.nombre)}
                                 variant="icon"
                                 className={`${
@@ -155,8 +156,8 @@ export const CardProduct = ({ product }) => {
                               <SelectValue placeholder="Select Player" />
                             </SelectTrigger>
                             <SelectContent>
-                              {jugadoresArgentina2Estrellas.map((e) => (
-                                <SelectItem value={e}>{e}</SelectItem>
+                              {jugadoresArgentina2Estrellas.map((e,index) => (
+                                <SelectItem key={index} value={e}>{e}</SelectItem>
                               ))}
                             </SelectContent>
                           </Select>
@@ -174,8 +175,9 @@ export const CardProduct = ({ product }) => {
               <p className="font-geist text-gray-700 mt-5">Select size</p>
               <div className="flex justify-start mt-2">
                 {talles.length > 0 &&
-                  talles.map((e) => (
+                  talles.map((e,index) => (
                     <Button
+                    key={index}
                       onClick={() => setSize(e.nombre)}
                       variant="icon"
                       className={`${
@@ -199,8 +201,8 @@ export const CardProduct = ({ product }) => {
                     <SelectValue placeholder="Select Player" />
                   </SelectTrigger>
                   <SelectContent>
-                    {jugadoresArgentina2Estrellas.map((e) => (
-                      <SelectItem value={e}>{e}</SelectItem>
+                    {jugadoresArgentina2Estrellas.map((e,index) => (
+                      <SelectItem key={index} value={e}>{e}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
