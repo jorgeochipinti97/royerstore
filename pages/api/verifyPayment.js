@@ -4,9 +4,7 @@ import Stripe from "stripe";
 
 export default async function handler(req, res) {
   // Asegúrate de usar tu clave secreta de Stripe aquí
-  const stripe = new Stripe(
-    "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"
-    // "sk_test_51MZbufFUPmM9VmmiNzRMzExGfjnvFaVDZFJjZJbzjaMbWI6w5kNjBk8meFO0FTqwGE7sXCaJYot2YXdGawas1qk000JmRwuyVj"
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY
   );
 
   if (req.method === "POST") {

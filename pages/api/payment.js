@@ -1,8 +1,5 @@
 import Stripe from "stripe";
-const stripe = new Stripe(
-  "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"
-  // "sk_test_51MZbufFUPmM9VmmiNzRMzExGfjnvFaVDZFJjZJbzjaMbWI6w5kNjBk8meFO0FTqwGE7sXCaJYot2YXdGawas1qk000JmRwuyVj"
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
@@ -18,7 +15,7 @@ export default async function handler(req, res) {
             name: product.title,
             images: product.images, // Asumiendo que esto es un array de URLs
           },
-          unit_amount:Math.round(product.price * 100), // Asegúrate que el precio esté en centavos
+          unit_amount: Math.round(product.price * 100), // Asegúrate que el precio esté en centavos
         },
         quantity: product.quantity,
       })),
@@ -29,7 +26,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json(session.url);
   } else {
-    res.setHeader("Allow", "POST"); 
+    res.setHeader("Allow", "POST");
     res.status(405).end("Method Not Allowed");
   }
 }
