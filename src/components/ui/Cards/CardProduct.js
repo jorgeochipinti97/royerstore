@@ -108,7 +108,6 @@ export const CardProduct = ({ product }) => {
             <CardTitle className="ml-2 font-geist tracking-tighter">
               {product.title}
             </CardTitle>
-
             <p className=" text-xl font-geist tracking-tighter mt-5">
               ${selectedPlayer.length > 2 ? product.price + 20 : product.price}
             </p>
