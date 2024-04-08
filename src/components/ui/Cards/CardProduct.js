@@ -127,7 +127,7 @@ export const CardProduct = ({ product }) => {
                         <p className="font-geist text-gray-700 mt-5">
                           Select size
                         </p>
-                        <div className="flex justify-start mt-2">
+                        <div className="flex justify-start mt-2 flex-wrap">
                           {talles.length > 0 &&
                             talles.map((e,index) => (
                               <Button
@@ -172,7 +172,7 @@ export const CardProduct = ({ product }) => {
             </section>
             <section>
               <p className="font-geist text-gray-700 mt-5">Select size</p>
-              <div className="flex justify-start mt-2">
+              <div className="flex justify-start mt-2 flex-wrap">
                 {talles.length > 0 &&
                   talles.map((e,index) => (
                     <Button
@@ -183,7 +183,7 @@ export const CardProduct = ({ product }) => {
                         e.nombre == size
                           ? "bg-black text-white"
                           : "bg-white text-black"
-                      } border mx-1 border-black`}
+                      } border m-1 border-black`}
                     >
                       {e.nombre.toUpperCase()}
                     </Button>
