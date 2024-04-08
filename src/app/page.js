@@ -220,8 +220,10 @@ export default function Home() {
 
       <p className="text-white font-geist font-bold">AND MUCH MORE COUNTRIES</p>
       <GlobeDemo />
-
-      <div className="flex md:flex-row justify-around items-center ">
+      <p className="font-extralight text-white  tracking-tighter relative top-10 font-geist text-3xl  text-center mb-5">
+        Global Shipping, Trusted and Secure
+      </p>
+      <div className="flex md:flex-row justify-around items-center mt-10 ">
         <img
           src="/fedex.png"
           className="bg-violet-900 w-[40%] md:w-[200] p-5 rounded-xl "
@@ -266,7 +268,7 @@ text-4xl md:text-6xl font-bold font-geist  text-center tracking-tighter  argenti
         RIVER PLATE
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3  ">
-        {riverProducts.map((e,index) => (
+        {riverProducts.map((e, index) => (
           <div key={index}>
             <CardProduct product={e} />
           </div>

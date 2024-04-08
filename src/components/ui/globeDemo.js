@@ -396,10 +396,8 @@ export function GlobeDemo() {
 
   return (
     <div className="flex flex-row items-center justify-center  h-fit md:h-auto  bg-black  w-full">
-      <div className="max-w-7xl mx-auto w-full  overflow-hidden min-h-[25rem]  md:h-[30rem] px-4 z-50">
-        <p className="font-extralight text-white  tracking-tighter relative top-10 font-geist text-3xl  text-center mb-5">
-          Global Shipping, Trusted and Secure
-        </p>
+      <div className="max-w-7xl mx-auto w-full  overflow-hidden  h-[25rem]  md:h-[30rem] px-4 z-50">
+    
         <div className="absolute w-full inset-x-0 h-40 z-40" />
         <World data={sampleArcs} globeConfig={globeConfig} />;
       </div>
