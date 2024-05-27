@@ -33,6 +33,7 @@ export const UserForm = ({ products }) => {
       zipCode: data.zipCode,
       phone: data.phone,
       city: data.city,
+      email: data.email,
       country: data.country,
       orderItems: products,
       total: totalPrice,

@@ -6,9 +6,12 @@ const orderSchema = new mongoose.Schema(
       {
         title: { type: String },
         size: { type: String },
+        personalization: { type: String },
         quantity: { type: Number },
         images: [{ type: String }],
+        
         price: { type: Number },
+
 
       },
     ],
