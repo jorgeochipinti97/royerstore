@@ -270,7 +270,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <p className="text-xl tracking-tighter mt-10">
-                  🚀 Don't miss out – shop now and cheer for Argentina! 🛒
+                  🚀 Don t miss out – shop now and cheer for Argentina! 🛒
                 </p>
               </CardFooter>
             </Card>
