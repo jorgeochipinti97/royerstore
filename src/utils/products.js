@@ -137,8 +137,8 @@ export const products = [
     tags: [""],
     equipo: "argentina",
     images: [
-      "https://res.cloudinary.com/dwtnrs4ix/image/upload/v1717043168/d3jcuuvrbzr21licbuoh.jpg",
-      "https://res.cloudinary.com/dwtnrs4ix/image/upload/v1717043168/tdww2w0lqmyptfxmqfr0.jpg",
+      "https://res.cloudinary.com/ddixxuvmi/image/upload/v1717074369/adidas-argentina-22-23-short-sleeve-t-shirt-home_1_vr6h59.jpg",
+      "https://res.cloudinary.com/ddixxuvmi/image/upload/v1717074369/adidas-argentina-22-23-short-sleeve-t-shirt-home_2_rn7qt3.jpg",
     ],
     slug: "argentina_official_home_2-star_shirt_22_aeroready",
     description: `100% Argentinian. Designed for fans, it offers comfort at all times thanks to its soft fabric with AEROREADY wicking technology. Details on the inside back neck are inspired by the national flag that players so proudly represent.`,

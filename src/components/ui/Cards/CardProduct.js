@@ -44,6 +44,7 @@ import { useRouter } from "next/navigation";
 import gsap, { Power1 } from "gsap";
 import useCarritoStore from "@/utils/cartStore";
 import { BuyerForm } from "@/components/Forms/buyerForm";
+import { useToast } from "../use-toast";
 
 export const CardProduct = ({ product }) => {
   const { push } = useRouter();
@@ -58,6 +59,7 @@ export const CardProduct = ({ product }) => {
   }, [product]);
 
   const [selectedPlayer, setSelectedPlayer] = useState("");
+  const date = new Date();
 
   useEffect(() => {
     isAdded &&
@@ -83,6 +85,7 @@ export const CardProduct = ({ product }) => {
         delay: 2.5,
       });
   }, [isAdded]);
+  const { toast } = useToast();
 
   return (
     <div className="flex justify-center">
@@ -217,7 +220,7 @@ export const CardProduct = ({ product }) => {
               className="border border-black w-full my-1"
               variant="outline"
               disabled={!size}
-              onClick={() =>
+              onClick={() => {
                 agregarProducto({
                   title: product.title,
                   price:
@@ -227,8 +230,12 @@ export const CardProduct = ({ product }) => {
                   size: size,
                   personalization: `${selectedPlayer}`,
                   images: product.images,
+                });
+                toast({
+                  title: "Item Added to Cart!",
+                  description: `Your item was successfully added to the cart on ${ date.toLocaleDateString()} at ${date.toLocaleTimeString()}.`,
                 })
-              }
+              }}
             >
               Add to cart
             </Button>

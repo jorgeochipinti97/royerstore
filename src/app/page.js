@@ -72,7 +72,7 @@ export default function Home() {
 
   return (
     <div className=" bg-black  flex items-center flex-col pb-10">
-      <div className="fixed right-2 bottom-3 z-50">
+      <div className="fixed left-2 bottom-3 z-50">
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <Button variant="secondary">
@@ -248,7 +248,7 @@ export default function Home() {
         >
           <div className="flex justify-center">
             <video
-              src="https://res.cloudinary.com/dwtnrs4ix/video/upload/v1717044014/nffzfaclsq6pbrymlane.mp4"
+              src="https://res.cloudinary.com/ddixxuvmi/video/upload/v1717074418/202405300136_1_ofnzox.mp4"
               muted
               autoPlay
               loop
