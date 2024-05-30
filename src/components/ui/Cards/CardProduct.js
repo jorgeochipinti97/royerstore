@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 
 import {
@@ -38,22 +39,22 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { jugadoresArgentina2Estrellas } from "@/utils/players";
-import axios from "axios";
 import { useRouter } from "next/navigation";
 
 import gsap, { Power1 } from "gsap";
 import useCarritoStore from "@/utils/cartStore";
-import { UserForm } from "@/components/Forms/userForm";
+import { BuyerForm } from "@/components/Forms/buyerForm";
 
 export const CardProduct = ({ product }) => {
   const { push } = useRouter();
-  const [size, setSize] = useState("");
+  const [size, setSize] = useState();
   const [talles, setTalles] = useState([]);
   const [isAdded, setIsAdded] = useState(false);
   const agregarProducto = useCarritoStore((state) => state.agregarProducto);
 
   useEffect(() => {
     product && setTalles(product.talles);
+    product && setSize(product.talles[0].nombre);
   }, [product]);
 
   const [selectedPlayer, setSelectedPlayer] = useState("");
@@ -83,8 +84,6 @@ export const CardProduct = ({ product }) => {
       });
   }, [isAdded]);
 
-
-
   return (
     <div className="flex justify-center">
       {product && (
@@ -93,7 +92,7 @@ export const CardProduct = ({ product }) => {
             <div className="flex justify-center">
               <Carousel className="w-9/12">
                 <CarouselContent>
-                  {product.images.map((e,index) => (
+                  {product.images.map((e, index) => (
                     <CarouselItem key={index}>
                       <img src={`${e}`} className="w-12/12" />
                     </CarouselItem>
@@ -129,9 +128,9 @@ export const CardProduct = ({ product }) => {
                         </p>
                         <div className="flex justify-start mt-2 flex-wrap">
                           {talles.length > 0 &&
-                            talles.map((e,index) => (
+                            talles.map((e, index) => (
                               <Button
-                              key={index}
+                                key={index}
                                 onClick={() => setSize(e.nombre)}
                                 variant="icon"
                                 className={`${
@@ -155,8 +154,10 @@ export const CardProduct = ({ product }) => {
                               <SelectValue placeholder="Select Player" />
                             </SelectTrigger>
                             <SelectContent>
-                              {jugadoresArgentina2Estrellas.map((e,index) => (
-                                <SelectItem key={index} value={e}>{e}</SelectItem>
+                              {jugadoresArgentina2Estrellas.map((e, index) => (
+                                <SelectItem key={index} value={e}>
+                                  {e}
+                                </SelectItem>
                               ))}
                             </SelectContent>
                           </Select>
@@ -174,9 +175,9 @@ export const CardProduct = ({ product }) => {
               <p className="font-geist text-gray-700 mt-5">Select size</p>
               <div className="flex justify-start mt-2 flex-wrap">
                 {talles.length > 0 &&
-                  talles.map((e,index) => (
+                  talles.map((e, index) => (
                     <Button
-                    key={index}
+                      key={index}
                       onClick={() => setSize(e.nombre)}
                       variant="icon"
                       className={`${
@@ -200,8 +201,10 @@ export const CardProduct = ({ product }) => {
                     <SelectValue placeholder="Select Player" />
                   </SelectTrigger>
                   <SelectContent>
-                    {jugadoresArgentina2Estrellas.map((e,index) => (
-                      <SelectItem key={index} value={e}>{e}</SelectItem>
+                    {jugadoresArgentina2Estrellas.map((e, index) => (
+                      <SelectItem key={index} value={e}>
+                        {e}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -243,7 +246,7 @@ export const CardProduct = ({ product }) => {
                 <AlertDialogHeader>
                   <AlertDialogTitle>{product.title}</AlertDialogTitle>
                   <AlertDialogDescription>
-                    <UserForm
+                    <BuyerForm
                       products={[
                         {
                           title: product.title,

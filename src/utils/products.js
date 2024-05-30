@@ -23,6 +23,14 @@ export const products = [
         nombre: "m",
         stock: 1,
       },
+      {
+        nombre: "l",
+        stock: 1,
+      },
+      {
+        nombre: "xl",
+        stock: 1,
+      },
     ],
   },
 
@@ -129,8 +137,8 @@ export const products = [
     tags: [""],
     equipo: "argentina",
     images: [
-      "https://res.cloudinary.com/dey28u2zn/image/upload/v1711990735/gbzlrp2uljiyfgpfbalf.webp",
-      "https://res.cloudinary.com/dey28u2zn/image/upload/v1711990735/a2n7jw8ymhqvollqve2n.webp",
+      "https://res.cloudinary.com/dwtnrs4ix/image/upload/v1717043168/d3jcuuvrbzr21licbuoh.jpg",
+      "https://res.cloudinary.com/dwtnrs4ix/image/upload/v1717043168/tdww2w0lqmyptfxmqfr0.jpg",
     ],
     slug: "argentina_official_home_2-star_shirt_22_aeroready",
     description: `100% Argentinian. Designed for fans, it offers comfort at all times thanks to its soft fabric with AEROREADY wicking technology. Details on the inside back neck are inspired by the national flag that players so proudly represent.`,

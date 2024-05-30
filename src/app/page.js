@@ -30,7 +30,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { UserForm } from "@/components/Forms/userForm";
+import { BuyerForm } from "@/components/Forms/buyerForm";
+import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   useEffect(() => {
@@ -160,7 +161,7 @@ export default function Home() {
                     <AlertDialogHeader>
                       <AlertDialogTitle>Cart</AlertDialogTitle>
                       <AlertDialogDescription>
-                        <UserForm products={productos} />
+                        <BuyerForm products={productos} />
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
@@ -232,6 +233,49 @@ export default function Home() {
           src="/dhl.svg"
           className="mt-5 md:mt-0 w-[45%] md:w-[250] bg-yellow-400 p-5 rounded-xl "
         />
+      </div>
+
+      <div className="mt-10">
+        <p className="text-white  text-center font-bold tracking-tighter text-2xl md:text-6xl my-5">
+          Cheer for Argentina in the Copa America with Royer
+        </p>
+        <p className="text-white text-center   mb-10 tracking-tighter text-xl md:text-2xl my-5">
+          Support the team and enjoy worldwide free shipping on all orders!
+        </p>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2
+        "
+        >
+          <div className="flex justify-center">
+            <video
+              src="https://res.cloudinary.com/dwtnrs4ix/video/upload/v1717044014/nffzfaclsq6pbrymlane.mp4"
+              muted
+              autoPlay
+              loop
+              playsInline
+              className="h-[80vh] shadowarg rounded-xl "
+            />
+          </div>
+          <div className="flex justify-center h-full mt-10 md:mt-0 items-center">
+            <Card className="h-fit p-5 w-11/12 md:w-10/12 shadowarg">
+              <CardTitle className='tracking-tighter text-xl text-center '>🎉 Win Big with Royer Sport! 🎉</CardTitle>
+              <CardContent>
+                <p className="text-xl tracking-tighter mt-10">
+                  Every purchase is a chance to win a ticket to the Argentina
+                  vs. Peru match 🇦🇷🇵🇪 and an official AEROREADY two-star jersey
+                  ⭐⭐! <br />
+                  Show your support for Argentina and enjoy our exclusive
+                  offers. 🎁
+                </p>
+              </CardContent>
+              <CardFooter>
+                <p className="text-xl tracking-tighter mt-10">
+                  🚀 Don't miss out – shop now and cheer for Argentina! 🛒
+                </p>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
       </div>
       <div className="mt-20">
         <p

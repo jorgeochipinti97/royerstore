@@ -9,14 +9,14 @@ const ProductSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   discountPrice: { type: Number },
   category: { type: String, required: true },
-  gender: { type: String },
-  tracking: { type: String },
-  sku: { type: String },
-  talles: [
+  subcategory: { type: String },
+  status: { type: String },
+  variants: [
     {
-      nombre: { type: String },
-      stock: { type: Number, default: 0 },
-    },
+      sku: { type: String },
+      price: { type: String },
+      size: { type: String },
+      stock: { type: Number, default: 0 },},
   ],
 });
 

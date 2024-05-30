@@ -7,7 +7,7 @@ import useCarritoStore from "@/utils/cartStore";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-export const UserForm = ({ products }) => {
+export const BuyerForm = ({ products }) => {
   const { push } = useRouter();
   const {
     register,
