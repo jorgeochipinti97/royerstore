@@ -97,7 +97,7 @@ export const CardProduct = ({ product }) => {
                 <CarouselContent>
                   {product.images.map((e, index) => (
                     <CarouselItem key={index}>
-                      <img src={`${e}`} className="w-12/12" />
+                      <img src={`${e}`} className="w-12/12 rounded-xl" />
                     </CarouselItem>
                   ))}
                 </CarouselContent>
